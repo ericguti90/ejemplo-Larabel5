@@ -32,6 +32,11 @@ class FabricanteController extends Controller
  
         return response()->json(['status'=>'ok','data'=>Fabricante::all()], 200);
     }
+
+    public function ejemplo(){
+        //return "Esto es un ejemplo";
+        return view('welcome');
+    }
  
     /**
      * Show the form for creating a new resource.
