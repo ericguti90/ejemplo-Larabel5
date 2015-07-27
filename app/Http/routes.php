@@ -55,3 +55,7 @@ php artisan route:list
 |        | DELETE   | fabricantes/{fabricantes}/aviones/{aviones} | fabricantes.aviones.destroy | App\Http\Controllers\FabricanteAvionController@destroy | auth.basic |
 +--------+----------+---------------------------------------------+-----------------------------+--------------------------------------------------------+------------+
 */
+
+// Cuando usamos un controlador resource tenemos que implementar todos los métodos
+// index, store, etc.. Aunque se pueden indicar en la ruta cuales no queremos con except
+Route::resource('users','UsersController');
