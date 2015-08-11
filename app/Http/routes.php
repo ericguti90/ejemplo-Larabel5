@@ -59,3 +59,5 @@ php artisan route:list
 // Cuando usamos un controlador resource tenemos que implementar todos los métodos
 // index, store, etc.. Aunque se pueden indicar en la ruta cuales no queremos con except
 Route::resource('users','UsersController');
+// Creamos un Controlador para gestionar la autenticación en HomeController.
+Route::controller('/','HomeController');

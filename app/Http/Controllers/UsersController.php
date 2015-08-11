@@ -19,6 +19,9 @@ use Hash;
  
 // Redireccionamientos.
 use Redirect;
+
+// Auth.
+use Auth;
  
 class UsersController extends Controller {
  
@@ -35,6 +38,7 @@ class UsersController extends Controller {
         // Devolvemos una Vista con toda la lista de usuarios.
         // Usamos el método Mágico withUsers que lo que envía es una
         // variable $users que contiene todos los usuarios.
+        if (!Auth::id()) return Redirect::to('login');
         return view('users')->withUsers(User::all());
     }
  
